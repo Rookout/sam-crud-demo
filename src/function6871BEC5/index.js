@@ -1,7 +1,8 @@
+const rookout = require('rookout/lambda');
 const AWS = require('aws-sdk');
 var dynamodb = new AWS.DynamoDB()
 
-exports.handler = async message => {
+exports.handler = rookout.wrap(message => {
   console.log(message);
   let userId = message.pathParameters.id
   let params = {
@@ -12,7 +13,7 @@ exports.handler = async message => {
   };
 
   console.log(`Getting user ${userId} from table ${process.env.TABLE_NAME}`);
-  let results = await dynamodb.getItem(params).promise()
+  let results = {"name": "test"}; //await dynamodb.getItem(params).promise()
   console.log(`Done: ${JSON.stringify(results)}`);
 
   return {
@@ -20,4 +21,4 @@ exports.handler = async message => {
     headers: {},
     body: JSON.stringify(results.Item)
   };
-}
+})

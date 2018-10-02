@@ -1,7 +1,8 @@
+const rookout = require('rookout/lambda');
 const AWS = require('aws-sdk');
 var dynamodb = new AWS.DynamoDB()
 
-exports.handler = async message => {
+exports.handler = rookout.wrap(async message => {
   console.log(message);
 
   if (message.body) {
@@ -22,4 +23,4 @@ exports.handler = async message => {
   }
 
   return {};
-}
+})

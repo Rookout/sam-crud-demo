@@ -1,7 +1,8 @@
+const rookout = require('rookout/lambda');
 const AWS = require('aws-sdk');
 var dynamodb = new AWS.DynamoDB()
 
-exports.handler = async message => {
+exports.handler = rookout.wrap(async message => {
   console.log(message);
   let userId = message.pathParameters.id
   let params = {
@@ -20,4 +21,4 @@ exports.handler = async message => {
     headers: {},
     body: JSON.stringify({})
   };
-}
+})
