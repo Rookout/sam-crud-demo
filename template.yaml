@@ -5,12 +5,12 @@ Resources:
   function48A53742:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub ${AWS::StackName}-function48A53742
+      FunctionName: !Sub ${AWS::StackName}-listUsers
       Description: !Sub
         - Stackery Stack ${StackeryStackTagName} Environment ${StackeryEnvironmentTagName} Function ${ResourceName}
         - ResourceName: listUsers
-      CodeUri: src/function48A53742
-      Handler: index.handler
+      CodeUri: ./
+      Handler: listUsers.handler
       Runtime: nodejs8.10
       MemorySize: 3008
       Timeout: 30
@@ -81,12 +81,12 @@ Resources:
   function5A53E646:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub ${AWS::StackName}-function5A53E646
+      FunctionName: !Sub ${AWS::StackName}-deleteUser
       Description: !Sub
         - Stackery Stack ${StackeryStackTagName} Environment ${StackeryEnvironmentTagName} Function ${ResourceName}
         - ResourceName: deleteUser
-      CodeUri: src/function5A53E646
-      Handler: index.handler
+      CodeUri: ./
+      Handler: deleteUser.handler
       Runtime: nodejs8.10
       MemorySize: 3008
       Timeout: 30
@@ -111,12 +111,12 @@ Resources:
   function1D0BF340:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub ${AWS::StackName}-function1D0BF340
+      FunctionName: !Sub ${AWS::StackName}-createUser
       Description: !Sub
         - Stackery Stack ${StackeryStackTagName} Environment ${StackeryEnvironmentTagName} Function ${ResourceName}
         - ResourceName: createUser
-      CodeUri: src/function1D0BF340
-      Handler: index.handler
+      CodeUri: ./
+      Handler: createUser.handler
       Runtime: nodejs8.10
       MemorySize: 3008
       Timeout: 30
@@ -141,12 +141,12 @@ Resources:
   functionC2148022:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub ${AWS::StackName}-functionC2148022
+      FunctionName: !Sub ${AWS::StackName}-updateUser
       Description: !Sub
         - Stackery Stack ${StackeryStackTagName} Environment ${StackeryEnvironmentTagName} Function ${ResourceName}
         - ResourceName: updateUser
-      CodeUri: src/functionC2148022
-      Handler: index.handler
+      CodeUri: ./
+      Handler: updateUser.handler
       Runtime: nodejs8.10
       MemorySize: 3008
       Timeout: 30
@@ -171,12 +171,12 @@ Resources:
   function6871BEC5:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub ${AWS::StackName}-function6871BEC5
+      FunctionName: !Sub ${AWS::StackName}-getUser
       Description: !Sub
         - Stackery Stack ${StackeryStackTagName} Environment ${StackeryEnvironmentTagName} Function ${ResourceName}
         - ResourceName: getUser
-      CodeUri: src/function6871BEC5
-      Handler: index.handler
+      CodeUri: ./
+      Handler: getUser.handler
       Runtime: nodejs8.10
       MemorySize: 3008
       Timeout: 30

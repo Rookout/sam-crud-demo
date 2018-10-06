@@ -6,7 +6,7 @@
     "build": "npm run install-modules && npm run build-package"
   },
   "dependencies": {
-    "rookout": "^0.1.19",
+    "rookout": "^0.1.21",
     "aws-sdk": "~2"
   }
 }
