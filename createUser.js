@@ -22,5 +22,9 @@ exports.handler = rookout.wrap(async message => {
     console.log(`User added to table, done`);
   }
 
-  return {};
+  return {
+    statusCode: 204,
+    headers: {},
+    body: JSON.stringify({})
+  };
 })
