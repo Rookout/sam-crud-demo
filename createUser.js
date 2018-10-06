@@ -6,7 +6,7 @@ exports.handler = rookout.wrap(async message => {
   console.log(message);
 
   if (message.body) {
-    let user = JSON.parse(message.body);
+    let user = message.body;
     let params = {
       TableName: process.env.TABLE_NAME,
       Item: {
